@@ -2,14 +2,14 @@ package org.fpij.jitakyoei.model;
 
 import java.util.Date;
 
-import main.java.org.fpij.jitakyoei.model.beans.Aluno;
-import main.java.org.fpij.jitakyoei.model.beans.Endereco;
-import main.java.org.fpij.jitakyoei.model.beans.Entidade;
-import main.java.org.fpij.jitakyoei.model.beans.Filiado;
-import main.java.org.fpij.jitakyoei.model.beans.Professor;
-import main.java.org.fpij.jitakyoei.model.beans.Rg;
-import main.java.org.fpij.jitakyoei.util.DatabaseManager;
-import org.junit.BeforeClass;
+import org.fpij.jitakyoei.model.beans.Aluno;
+import org.fpij.jitakyoei.model.beans.Entidade;
+import org.fpij.jitakyoei.model.beans.Endereco;
+import org.fpij.jitakyoei.model.beans.Filiado;
+import org.fpij.jitakyoei.model.beans.Professor;
+import org.fpij.jitakyoei.model.beans.Rg;
+import org.fpij.jitakyoei.model.util.DatabaseManager;
+import org.junit.jupiter.api.BeforeAll;
 
 public class ModelIntegrationTests {
 //	private static DAO<Aluno> alunoDao;
@@ -20,7 +20,7 @@ public class ModelIntegrationTests {
 	private static Filiado filiadoProf;
 	private static Professor professor;
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUp(){
 		DatabaseManager.setEnviroment(DatabaseManager.TEST);
 		filiadoAluno = new Filiado();
