@@ -1,6 +1,6 @@
-package org.fpij.jitakyoei.model.dao;
-
 import static org.junit.Assert.*;
+import org.fpij.jitakyoei.model.beans.*;
+import org.fpij.jitakyoei.util.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,15 +9,7 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.fpij.jitakyoei.model.beans.Endereco;
-import org.fpij.jitakyoei.model.beans.Entidade;
-import org.fpij.jitakyoei.model.beans.Filiado;
-import org.fpij.jitakyoei.model.beans.Professor;
-import org.fpij.jitakyoei.model.dao.DAO;
-import org.fpij.jitakyoei.model.dao.DAOImpl;
-import org.fpij.jitakyoei.util.DatabaseManager;
-
-public class ProfessorTest {
+public class FaixaTest {
 
     private static DAO<Professor> professorDao;
     private static Professor professor;
@@ -27,7 +19,6 @@ public class ProfessorTest {
 
     @BeforeClass
     public static void setUp() {
-        // Configurar o ambiente de teste
         DatabaseManager.setEnviroment(DatabaseManager.TEST);
 
         // Criar endereço
