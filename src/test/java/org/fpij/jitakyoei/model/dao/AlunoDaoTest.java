@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import org.junit.BeforeClass;
+import org.junit.BeforeEach;
 import org.junit.Test;
 
 import org.fpij.jitakyoei.model.beans.Aluno;
