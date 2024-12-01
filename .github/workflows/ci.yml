@@ -1,19 +1,23 @@
-name: Java
+name: Java CI
 
 on:
   push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up JDK 1.11
+      - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
           java-version: '17'
@@ -22,22 +26,11 @@ jobs:
       - name: Build
         run: mvn --batch-mode -DskipTests package
 
-      - name: Test
+      - name: Run Specific Tests
         run: mvn --batch-mode -Dtest=org.fpij.jitakyoei.model.dao.* test
 
-      - name: Report
-        uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: Maven Tests
-          path: target/surefire-reports/*.xml
-          reporter: java-junit
-          fail-on-error: true
-
-      - name: Generate Code Coverage
-        run: mvn test jacoco:report
       - name: Upload Coverage Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: code-coverage-report
-          path: target/site/jacoco/index.html
+          name: test-reports
+          path: target/surefire-reports/*.xml
