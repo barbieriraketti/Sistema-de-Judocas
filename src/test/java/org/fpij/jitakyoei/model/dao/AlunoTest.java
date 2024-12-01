@@ -23,43 +23,43 @@ import org.fpij.jitakyoei.util.DatabaseManager;
 
 public class AlunoTest {
     private static Aluno aluno;
+    private static Filiado filiado;
+    private static Professor professor;
 
     @BeforeClass
     public static void setUp() {
         aluno = new Aluno();
+        professor = new Professor();
+        filiado = new Filiado();
+        filiadoProf = new Filiado();
     }
 
     @Test
-    public void setFiliado() {
-        Filiado filiado = new Filiado();
-        filiado.setNome("Carlos Souza");
-        filiado.setCpf("123.456.789-00");
+    public void testFiliado() {
+        filiado.setNome("nome do filiado");
+        filiado.setCpf("123456");
 
         aluno.setFiliado(filiado);
         assertEquals(filiado, aluno.getFiliado());
-        assertEquals("Carlos Souza", aluno.getFiliado().getNome());
-        assertEquals("123.456.789-00", aluno.getFiliado().getCpf());
+        assertEquals("nome do filiado", aluno.getFiliado().getNome());
+        assertEquals("123456", aluno.getFiliado().getCpf());
     }
 
     @Test
-    public void setProfessor() {
-        Professor professor = new Professor();
-        Filiado filiadoProf = new Filiado();
-        filiadoProf.setNome("Professor João");
+    public void testProfessor() {
+        filiadoProf.setNome("nome do professor");
         professor.setFiliado(filiadoProf);
 
         aluno.setProfessor(professor);
         assertEquals(professor, aluno.getProfessor());
-        assertEquals("Professor João", aluno.getProfessor().getFiliado().getNome());
+        assertEquals("nome do professor", aluno.getProfessor().getFiliado().getNome());
     }
 
     @Test
-    public void setEntidade() {
-        Entidade entidade = new Entidade();
-        entidade.setNome("Academia Jitakyoei");
-
+    public void testEntidade() {
+        entidade.setNome("nome da entidade");
         aluno.setEntidade(entidade);
         assertEquals(entidade, aluno.getEntidade());
-        assertEquals("Academia Jitakyoei", aluno.getEntidade().getNome());
+        assertEquals("nome da entidade", aluno.getEntidade().getNome());
     }
 }
