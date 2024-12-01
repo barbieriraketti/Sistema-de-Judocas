@@ -30,8 +30,8 @@ public class EntidadeTest {
     public void testEntidade() {
         entidade.setNome("nome da entidade");        
         entidade.setCnpj("123456");
-        Assert.assertEquals("123456", entidade.getCnpj());
-        Assert.assertEquals("nome da entidade", entidade.getNome());
+        assertEquals("123456", entidade.getCnpj());
+        assertEquals("nome da entidade", entidade.getNome());
     }
     
     @Test
@@ -41,6 +41,6 @@ public class EntidadeTest {
         endereco.setCidade("SP");
         endereco.setEstado("SP");
         entidade.setEndereco(endereco);
-        Assert.assertEquals(endereco, entidade.getEndereco());
+        assertEquals(endereco, entidade.getEndereco());
     }
 }
