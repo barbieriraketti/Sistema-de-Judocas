@@ -2,10 +2,6 @@ import static org.junit.Assert.*;
 import org.fpij.jitakyoei.model.beans.*;
 import org.fpij.jitakyoei.util.*;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
 
