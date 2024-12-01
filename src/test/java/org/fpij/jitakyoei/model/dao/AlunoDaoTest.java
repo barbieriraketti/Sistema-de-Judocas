@@ -1,9 +1,25 @@
-package org.fpij.jitakyoei.model.beans;
+package org.fpij.jitakyoei.model.dao;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import org.fpij.jitakyoei.model.beans.Aluno;
+import org.fpij.jitakyoei.model.beans.Endereco;
+import org.fpij.jitakyoei.model.beans.Entidade;
+import org.fpij.jitakyoei.model.beans.Filiado;
+import org.fpij.jitakyoei.model.beans.Professor;
+import org.fpij.jitakyoei.model.dao.DAO;
+import org.fpij.jitakyoei.model.dao.DAOImpl;
+import org.fpij.jitakyoei.util.DatabaseManager;
 
 class AlunoTest {
     private Aluno aluno;
