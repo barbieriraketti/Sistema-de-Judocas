@@ -14,18 +14,21 @@ public class FaixaTest {
     private static Filiado filiado;
     private static Aluno aluno;
     private static List<Faixa> faixas;
+    private static CorFaixa cor;
 
     @BeforeClass
     public static void setUp() {
-        Faixa faixa = new Faixa();
-        Filiado filiado = new Filiado();
-        Aluno aluno = new Aluno();
+        faixa = new Faixa();
+        filiado = new Filiado();
+        aluno = new Aluno();
         faixas = new ArrayList<>();
+        cor = new CorFaixa();
+        
     }
 
      @Test
     public void testCor() {        
-        CorFaixa cor = CorFaixa.PRETA5DAN;
+        cor = CorFaixa("Verde");
         faixa.setCor(cor);
         assertEquals(cor, faixa.getCor());
     }
