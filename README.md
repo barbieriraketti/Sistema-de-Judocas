@@ -8,4 +8,3 @@
 
 
 ## Toda documentação está na Wiki do projeto.
-
