@@ -34,15 +34,15 @@ jobs:
           reporter: java-junit
           fail-on-error: true
 
-      - name: Upload coverage report
-        if: success()
-        uses: actions/upload-artifact@v3
+      - name: Generate JaCoCo Coverage Badge
+        uses: cicirello/jacoco-badge-generator@v2
         with:
-          name: coverage-report
-          path: target/site/jacoco
+          jacoco-csv-file: target/site/jacoco/jacoco.csv
+          badges-directory: coverage
+          coverage-badge-filename: coverage.svg
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+      - name: Upload JaCoCo Report as Artifact
+        uses: actions/upload-artifact@v4
         with:
-          files: target/site/jacoco/jacoco.xml
-          token: ${{ secrets.CODECOV_TOKEN }}
+          name: jacoco-report
+          path: target/site/jacoco
