@@ -13,6 +13,7 @@
 ### 1.1 Propósito
 Este documento define os requisitos específicos para o Sistema para a Federação Piauiense de Judô (FPIJ) e detalha as especificações das funcionalidades, capacidades, atributos críticos e outras características do sistema proposto.
 
+
 ### 1.2 Escopo
 O sistema será responsável por:
 - Gerenciar os dados cadastrais de alunos e professores filiados.
