@@ -22,7 +22,6 @@ public class FaixaTest {
         filiado = new Filiado();
         aluno = new Aluno();
         faixas = new ArrayList<>();
-        cor = new CorFaixa();
         
     }
 
