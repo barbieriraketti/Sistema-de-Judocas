@@ -23,7 +23,7 @@ jobs:
         run: mvn --batch-mode -DskipTests package
 
       - name: Test
-        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+        run: mvn --batch-mode -Dtest=org.fpij.jitakyoei.model.dao.* test
 
       - name: Report
         uses: dorny/test-reporter@v1
@@ -33,3 +33,11 @@ jobs:
           path: target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: true
+
+      - name: Generate Code Coverage
+        run: mvn test jacoco:report
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: target/site/jacoco/index.html
