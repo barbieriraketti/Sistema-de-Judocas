@@ -24,7 +24,10 @@ import org.fpij.jitakyoei.util.DatabaseManager;
 public class AlunoTest {
     private static Aluno aluno;
     private static Filiado filiado;
+    private static Filiado filiadoProf;
     private static Professor professor;
+    private static Entidade entidade;
+    
 
     @BeforeClass
     public static void setUp() {
@@ -32,6 +35,7 @@ public class AlunoTest {
         professor = new Professor();
         filiado = new Filiado();
         filiadoProf = new Filiado();
+        entidade = new Entidade();
     }
 
     @Test
