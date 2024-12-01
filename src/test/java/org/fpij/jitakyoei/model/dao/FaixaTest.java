@@ -35,7 +35,7 @@ public class FaixaTest {
 
     @Test
     public void testFaixaAluno() {
-        CorFaixa cor = CorFaixa.PRETA5DAN;
+        cor = CorFaixa("Verde");
         
         filiado.setNome("nome do filiado");
         
