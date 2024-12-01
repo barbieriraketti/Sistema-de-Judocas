@@ -21,7 +21,7 @@ import org.fpij.jitakyoei.model.dao.DAO;
 import org.fpij.jitakyoei.model.dao.DAOImpl;
 import org.fpij.jitakyoei.util.DatabaseManager;
 
-class AlunoTest {
+public class AlunoTest {
     private static Aluno aluno;
 
     @BeforeClass
