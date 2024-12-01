@@ -25,12 +25,12 @@ class AlunoTest {
     private Aluno aluno;
 
     @BeforeClass
-    void setUp() {
+    public static void setUp() {
         aluno = new Aluno();
     }
 
     @Test
-    void setFiliado() {
+    public static void setFiliado() {
         Filiado filiado = new Filiado();
         filiado.setNome("Carlos Souza");
         filiado.setCpf("123.456.789-00");
@@ -42,7 +42,7 @@ class AlunoTest {
     }
 
     @Test
-    void setProfessor() {
+    public static void setProfessor() {
         Professor professor = new Professor();
         Filiado filiadoProf = new Filiado();
         filiadoProf.setNome("Professor João");
@@ -54,7 +54,7 @@ class AlunoTest {
     }
 
     @Test
-    void setEntidade() {
+    public static void setEntidade() {
         Entidade entidade = new Entidade();
         entidade.setNome("Academia Jitakyoei");
 
