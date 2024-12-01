@@ -71,6 +71,7 @@ Embora a equipe tenha experiência em Java, não possui experiência prévia com
 - **Professor**: Fornece dados para cadastro e recebe carteira de filiação.
 - **Aluno**: Fornece dados para cadastro e recebe carteira de filiação.
 
+
 ### 4.3 Casos de Uso
 - **Adicionar, Atualizar, Apagar e Buscar Alunos, Professores e Entidades**.
 - **Emitir Relatórios e Carteiras de Filiação**.
