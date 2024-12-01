@@ -28,14 +28,14 @@ public class FaixaTest {
 
      @Test
     public void testCor() {        
-        cor = CorFaixa("Verde");
+        cor = CorFaixa.VERDE;
         faixa.setCor(cor);
         assertEquals(cor, faixa.getCor());
     }
 
     @Test
     public void testFaixaAluno() {
-        cor = CorFaixa("Verde");
+        cor = CorFaixa.VERDE;
         
         filiado.setNome("nome do filiado");
         
