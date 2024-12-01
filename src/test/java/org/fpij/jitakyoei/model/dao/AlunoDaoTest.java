@@ -1,16 +1,16 @@
-package org.fpij.jitakyoei.model.dao;
+package test.java.org.fpij.jitakyoei.model.dao;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
 import java.util.List;
 
-import org.fpij.jitakyoei.model.beans.Aluno;
-import org.fpij.jitakyoei.model.beans.Endereco;
-import org.fpij.jitakyoei.model.beans.Entidade;
-import org.fpij.jitakyoei.model.beans.Filiado;
-import org.fpij.jitakyoei.model.beans.Professor;
-import org.fpij.jitakyoei.util.DatabaseManager;
+import main.java.org.fpij.jitakyoei.model.beans.Aluno;
+import main.java.org.fpij.jitakyoei.model.beans.Endereco;
+import main.java.org.fpij.jitakyoei.model.beans.Entidade;
+import main.java.org.fpij.jitakyoei.model.beans.Filiado;
+import main.java.org.fpij.jitakyoei.model.beans.Professor;
+import main.java.org.fpij.jitakyoei.util.DatabaseManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
