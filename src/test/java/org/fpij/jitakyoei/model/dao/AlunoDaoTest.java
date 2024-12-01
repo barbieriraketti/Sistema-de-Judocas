@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import org.junit.BeforeEach;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import org.fpij.jitakyoei.model.beans.Aluno;
@@ -24,7 +24,7 @@ import org.fpij.jitakyoei.util.DatabaseManager;
 class AlunoTest {
     private Aluno aluno;
 
-    @BeforeEach
+    @BeforeClass
     void setUp() {
         aluno = new Aluno();
     }
